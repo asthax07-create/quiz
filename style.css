@@ -1,0 +1,115 @@
+:root {
+    --navy: #0b1f3a;
+    --navy-mid: #14345c;
+    --blue: #1e4d8c;
+    --blue-soft: #e8eef6;
+    --white: #ffffff;
+    --gold: #c9a227;
+    --gold-dark: #a6841a;
+    --gold-light: #f4e8c1;
+    --ink: #12233d;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--ink);
+    background:
+        radial-gradient(circle at top, #1a3f73 0%, var(--navy) 55%, #071525 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 20px 64px;
+}
+
+h1 {
+    margin: 0 0 32px;
+    color: var(--white);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 1.75rem;
+    text-align: center;
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 12px;
+}
+
+#quiz {
+    width: 100%;
+    max-width: 640px;
+    background: var(--white);
+    border: 1px solid var(--gold);
+    border-radius: 12px;
+    padding: 36px 32px 28px;
+    box-shadow: 0 18px 40px rgba(7, 21, 37, 0.35);
+}
+
+#question {
+    margin: 0 0 24px;
+    color: var(--navy);
+    font-size: 1.35rem;
+    line-height: 1.45;
+    font-weight: 600;
+}
+
+#options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#options button {
+    appearance: none;
+    width: 100%;
+    text-align: left;
+    font-family: inherit;
+    font-size: 1rem;
+    line-height: 1.4;
+    color: var(--navy);
+    background: var(--blue-soft);
+    border: 1px solid var(--navy-mid);
+    border-left: 4px solid var(--gold);
+    border-radius: 8px;
+    padding: 14px 16px;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+
+#options button:hover,
+#options button:focus-visible {
+    background: var(--navy-mid);
+    color: var(--white);
+    border-color: var(--gold);
+    outline: none;
+}
+
+#options button:active {
+    background: var(--blue);
+    transform: translateY(1px);
+}
+
+#result {
+    width: 100%;
+    max-width: 640px;
+    margin: 24px 0 0;
+    padding: 16px 20px;
+    text-align: center;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--navy);
+    background: var(--gold-light);
+    border: 1px solid var(--gold);
+    border-radius: 8px;
+    min-height: 1.5em;
+}
+
+#result:empty {
+    display: none;
+}
